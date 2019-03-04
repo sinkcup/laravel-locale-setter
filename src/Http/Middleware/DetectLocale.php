@@ -29,7 +29,7 @@ class DetectLocale
             $locale = self::lang2locale($first_lang, $this->app['config']['locale']['locale_map']);
         }
         if (empty($locale)) {
-            $locale = $this->app['config']['app']['fallback_locale'];
+            $locale = $this->app['config']['app']['locale'];
         }
         $this->app->setLocale($locale);
         return $next($request);
